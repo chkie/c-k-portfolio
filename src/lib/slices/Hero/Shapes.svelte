@@ -7,7 +7,7 @@
   interactivity();
   transitions();
 
-  let isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  let isMobile = /Mobile|Android/i.test(navigator.userAgent);
 </script>
 
 <Threlte.PerspectiveCamera makeDefault position={[0, 0, 25]} aspect={1} fov={30} near={1} far={40} />
