@@ -29,9 +29,7 @@
   <slot />
 </main>
 <div class="background-gradient absolute inset-0 -z-50 ma-h-screen" />
-<div
-  class="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('noisetexture.jpg')] opacity-10 mix-blend-soft-light"
-></div>
+<div class="pointer-events-none absolute inset-0 -z-40 h-full opacity-10 mix-blend-soft-light"></div>
 <Footer settings={data.settings} />
 
 <PrismicPreview {repositoryName} />

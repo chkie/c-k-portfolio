@@ -13,7 +13,7 @@
     <div class="name flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start">
       <a
         href="/"
-        class="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-yellow-400"
+        class="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-cyan-500"
       >
         {settings.data.name}
       </a>
@@ -29,7 +29,7 @@
           <li>
             <PrismicLink
               field={link}
-              class="block px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-150 hover:text-yellow-400"
+              class="block px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-150 hover:text-cyan-500"
               >{label}</PrismicLink
             >
           </li>
@@ -43,7 +43,7 @@
       {#if isFilled.link(settings.data.github_link)}
         <PrismicLink
           field={settings.data.github_link}
-          class="p-2 text-2xl transition-all duration-150 transform text-slate-300 hover:text-cyan-400 hover:scale-125"
+          class="p-2 text-2xl transition-all duration-150 transform text-slate-300 hover:text-cyan-500 hover:scale-125"
           aria-label={settings.data.name + ' on GitHub'}
         >
           <IconGithub />
@@ -53,7 +53,7 @@
         {#if isFilled.link(settings.data.linkedin_link)}
           <PrismicLink
             field={settings.data.linkedin_link}
-            class="p-2 text-2xl transition-all duration-150 transform text-slate-300 hover:text-cyan-400 hover:scale-125"
+            class="p-2 text-2xl transition-all duration-150 transform text-slate-300 hover:text-cyan-500 hover:scale-125"
             aria-label={settings.data.name + ' on LinkedIn'}
           >
             <IconLinkedIn />
@@ -64,7 +64,7 @@
         {#if isFilled.link(settings.data.x_link)}
           <PrismicLink
             field={settings.data.x_link}
-            class="p-2 text-2xl transition-all duration-150 transform text-slate-300 hover:text-cyan-400 hover:scale-125"
+            class="p-2 text-2xl transition-all duration-150 transform text-slate-300 hover:text-cyan-500 hover:scale-125"
             aria-label={settings.data.name + ' on X'}
           >
             <IconX />
