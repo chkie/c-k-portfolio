@@ -9,7 +9,7 @@
 </script>
 
 <Threlte.PerspectiveCamera makeDefault position={[0, 0, 25]} aspect={1} fov={30} near={1} far={40} />
-<Environment files="smallroom.hdr" path="/" format="hdr" />
+<Environment files="smallroom.hdr" path="/" />
 <ContactShadows position={[0, -3.5, 0]} opacity={0.65} scale={40} blurr={1} far={9} />
 
 <!-- Gem -->

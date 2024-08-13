@@ -11,10 +11,7 @@
 <footer class="text-slate-600">
   <div class="container mx-auto flex mt-20 flex-col items-center justify-between gap-6 py-8 sm:flex-row max-w-7xl">
     <div class="name flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start">
-      <a
-        href="/"
-        class="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-cyan-500"
-      >
+      <a href="/" class="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-cyan-500">
         {settings.data.name}
       </a>
       <span class="hidden text-5xl font-extralight leading-[0] text-slate-400 sm:inline" aria-hidden="true">/</span>
@@ -27,11 +24,7 @@
       <ul class="flex items-center gap-1">
         {#each settings.data.nav_items as { link, label }, index}
           <li>
-            <PrismicLink
-              field={link}
-              class="block px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-150 hover:text-cyan-500"
-              >{label}</PrismicLink
-            >
+            <PrismicLink field={link} class="block px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-150 hover:text-cyan-500">{label}</PrismicLink>
           </li>
           {#if index < settings.data.nav_items.length - 1}
             <span class="text-4xl font-thin leading-[0] text-slate-400" aria-hidden="true">/</span>
@@ -62,11 +55,7 @@
       </div>
       <div class="socials inline-flex justify-center sm:justify-end">
         {#if isFilled.link(settings.data.x_link)}
-          <PrismicLink
-            field={settings.data.x_link}
-            class="p-2 text-2xl transition-all duration-150 transform text-slate-300 hover:text-cyan-500 hover:scale-125"
-            aria-label={settings.data.name + ' on X'}
-          >
+          <PrismicLink field={settings.data.x_link} class="p-2 text-2xl transition-all duration-150 transform text-slate-300 hover:text-cyan-500 hover:scale-125" aria-label={settings.data.name + ' on X'}>
             <IconX />
           </PrismicLink>
         {/if}
