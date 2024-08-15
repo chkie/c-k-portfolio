@@ -14,9 +14,12 @@
   }
 </script>
 
-<header class="top-0 z-50 mx-auto max-w-7xl md:top-4 md:sticky relative">
+<header
+  class="top-0 z-50 mx-auto max-w-7xl md:top-4 md:sticky relative bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border rounded-full border-slate-800
+"
+>
   <nav>
-    <div class="flex-col justify-between rounded-b-lg flex text-slate-200 md:px-0 top-2 px-4 py-4 md:m-4 md:flex-row md:items-center">
+    <div class="flex-col justify-between flex text-slate-200 md:px-4 top-2 px-8 py-2 md:m-4 md:flex-row md:items-center">
       <div class="flex items-center justify-between">
         <a href="/" aria-label="Hompage" class="text-xl font-extrabold tracking-tighter hover:text-cyan-500"> {settings.data.name}</a>
         <button aria-expanded={open} aria-label="Open Menu" class="block p-2 text-2xl text-slate-200 md:hidden hover:text-cyan-500" on:click={() => (open = true)}><IconMenu /></button>
