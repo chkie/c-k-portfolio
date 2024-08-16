@@ -6,10 +6,21 @@
 
   interactivity();
   transitions();
+
+  let isMobile = /Mobile|Android/i.test(navigator.userAgent);
 </script>
 
 <Threlte.PerspectiveCamera makeDefault position={[0, 0, 25]} aspect={1} fov={30} near={1} far={40} />
-<Environment files="smallroom.hdr" path="/" format="hdr" />
+
+{#if !isMobile}
+  <!-- Verwende die HDR-Umgebung nur auf nicht-mobilen Geräten -->
+  <Environment files="smallroom.hdr" path="/" format="hdr" />
+{:else}
+  <!-- Verwende eine einfache Farbgebung oder eine einfache Textur für mobile Geräte -->
+  <Threlte.AmbientLight intensity={0.5} />
+  <Threlte.DirectionalLight position={[10, 10, 10]} intensity={1} castShadow />
+{/if}
+
 <ContactShadows position={[0, -3.5, 0]} opacity={0.65} scale={40} blurr={1} far={9} />
 
 <!-- Gem -->

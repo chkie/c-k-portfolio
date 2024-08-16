@@ -16,9 +16,13 @@
 
 <header class="top-0 z-50 mx-auto max-w-7xl md:top-4 md:sticky relative">
   <nav>
-    <div class="flex-col justify-between rounded-b-lg flex text-slate-200 md:px-0 top-2 px-4 py-4 md:m-4 md:flex-row md:items-center">
-      <div class="flex items-center justify-between">
-        <a href="/" aria-label="Hompage" class="text-xl font-extrabold tracking-tighter hover:text-cyan-500"> {settings.data.name}</a>
+    <div class="flex-col justify-between flex text-slate-200 md:px-0 top-2 px-8 py-2 md:flex-row md:items-center">
+      <div
+        class="flex items-center justify-between bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border rounded-full pl-2 border-slate-800 hover:text-cyan-500 md:px-10 md:py-12 px-2 py-3 md:hover:border-cyan-500"
+      >
+        <a href="/" aria-label="Hompage" class="avatar text-6xl font-extrabold relative bottom-2 left-2 md:left-0 md:bottom-2 tracking-tighter text-slate-500">
+          {settings.data.first_name}<span class="text-[3.65rem] relative top-[14.7px] right-[0.75rem] -z-10 text-slate-200">{settings.data.last_name}</span></a
+        >
         <button aria-expanded={open} aria-label="Open Menu" class="block p-2 text-2xl text-slate-200 md:hidden hover:text-cyan-500" on:click={() => (open = true)}><IconMenu /></button>
       </div>
       <!-- Mobile Menu -->
