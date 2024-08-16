@@ -10,9 +10,9 @@
 </script>
 
 <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-  <div class="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
+  <div class="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr] px-4 md:px-6 lg:mt-20">
     <Heading size="xl" class="col-start-1">{slice.primary.heading}</Heading>
-    <div class="col-start-1 prose prose-invert prose-slate prose-xl">
+    <div class="col-start-1 prose prose-invert prose-slate prose-lg">
       <PrismicRichText field={slice.primary.description} />
     </div>
     <Button linkField={slice.primary.button_link} label={slice.primary.button_label} />

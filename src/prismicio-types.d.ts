@@ -105,15 +105,37 @@ export interface SettingsDocumentDataNavItemsItem {
  */
 interface SettingsDocumentData {
   /**
-   * Name field in *Settings*
+   * First Name field in *Settings*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.name
+   * - **API ID Path**: settings.first_name
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  name: prismic.KeyTextField;
+  first_name: prismic.KeyTextField;
+
+  /**
+   * Last Name field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.last_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  last_name: prismic.KeyTextField;
+
+  /**
+   * Full Name field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.full_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  full_name: prismic.KeyTextField;
 
   /**
    * Nav Items field in *Settings*
