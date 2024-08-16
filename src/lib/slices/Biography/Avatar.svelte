@@ -2,7 +2,7 @@
   import { PrismicImage } from '@prismicio/svelte';
   import { type ImageField } from '@prismicio/client';
   import clsx from 'clsx';
-  import gsap from 'gsap';
+  import { gsap } from 'gsap';
   import { onMount } from 'svelte';
 
   export let image: ImageField;
