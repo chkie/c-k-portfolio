@@ -46,21 +46,21 @@
         ease: 'elastic.out(1,0.3)'
       }
     );
-  });
 
-  gsap.fromTo(
-    '.avatar',
-    {
-      opacity: 0,
-      scale: 1.4
-    },
-    {
-      opacity: 1,
-      scale: 1,
-      duration: 1.3,
-      ease: 'power3.inOut'
-    }
-  );
+    gsap.fromTo(
+      '.avatar',
+      {
+        opacity: 0,
+        scale: 1.4
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.3,
+        ease: 'power3.inOut'
+      }
+    );
+  });
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="px-4 md:px-6">
