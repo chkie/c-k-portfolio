@@ -2,7 +2,7 @@
   import Bounded from '$lib/components/Bounded.svelte';
   import Button from '$lib/components/Button.svelte';
   import type { Content } from '@prismicio/client';
-  import { PrismicImage, PrismicRichText } from '@prismicio/svelte';
+  import { PrismicRichText } from '@prismicio/svelte';
   import Heading from '$lib/components/Heading.svelte';
   import Avatar from './Avatar.svelte';
 

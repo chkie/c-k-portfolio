@@ -27,11 +27,11 @@
 
     window.onmousemove = (e) => {
       if (!component) return; // component is not ready yet
-      const comonentRect = (component as HTMLElement).getBoundingClientRect();
-      const componentCenterX = comonentRect.left + comonentRect.width / 2;
+      const componentRect = (component as HTMLElement).getBoundingClientRect();
+      const componentCenterX = componentRect.left + componentRect.width / 2;
 
       let componentPercent = {
-        x: (e.clientX - componentCenterX) / comonentRect.width / 2
+        x: (e.clientX - componentCenterX) / componentRect.width / 2
       };
 
       let distFromCenterX = 1 - Math.abs(componentPercent.x);
