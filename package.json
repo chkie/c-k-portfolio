@@ -14,10 +14,13 @@
 		"slicemachine": "start-slicemachine"
 	},
 	"devDependencies": {
+		"@iconify-json/bi": "^1.1.24",
 		"@iconify-json/fa6-brands": "^1.1.22",
 		"@iconify-json/ic": "^1.1.18",
 		"@iconify-json/material-symbols-light": "^1.1.27",
+		"@iconify-json/octicon": "^1.1.57",
 		"@iconify-json/ph": "^1.1.14",
+		"@iconify-json/prime": "^1.1.13",
 		"@slicemachine/adapter-sveltekit": "^0.3.45",
 		"@sveltejs/adapter-auto": "^3.2.2",
 		"@sveltejs/kit": "^2.5.15",
