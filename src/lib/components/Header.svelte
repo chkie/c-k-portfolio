@@ -1,6 +1,6 @@
 <script lang="ts">
   import { type Content, isFilled } from '@prismicio/client';
-  import NavBarLink from './NavBarLink.svelte';
+  import NavBarLink from './NavbarLink.svelte';
   import Button from './Button.svelte';
 
   import IconMenu from '~icons/ic/baseline-menu';
