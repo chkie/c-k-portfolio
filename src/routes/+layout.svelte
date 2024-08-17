@@ -1,6 +1,12 @@
 <script>
   import '../app.css';
   import '@fontsource/poppins';
+  import '@fontsource/poppins/300.css';
+  import '@fontsource/poppins/400.css';
+  import '@fontsource/poppins/500.css';
+  import '@fontsource/poppins/600.css';
+  import '@fontsource/poppins/700.css';
+  import '@fontsource/poppins/800.css';
   import { PrismicPreview } from '@prismicio/svelte/kit';
   import { page } from '$app/stores';
   import { repositoryName } from '$lib/prismicio';
