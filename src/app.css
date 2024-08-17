@@ -3,11 +3,7 @@
 @import 'tailwindcss/utilities';
 
 body {
-  body {
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-  }
+  font-family: 'Inter Variable', sans-serif;
 }
 
 .background-gradient {
