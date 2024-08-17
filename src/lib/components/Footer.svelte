@@ -2,8 +2,8 @@
   import { type Content, isFilled } from '@prismicio/client';
   import { PrismicLink } from '@prismicio/svelte';
   import IconGithub from '~icons/octicon/mark-github-16';
-  import IconLinkedin from '~icons/fa-brands/linkedin';
-  import IconX from '~icons/simple-icons/x';
+  import IconLinkedin from '~icons/bi/linkedin';
+  import IconX from '~icons/prime/twitter';
   import Bounded from './Bounded.svelte';
 
   export let settings: Content.SettingsDocument;
