@@ -2,7 +2,7 @@
   import { T as Threlte } from '@threlte/core';
   import { Float, createTransition } from '@threlte/extras';
   import * as THREE from 'three';
-  import gsap from 'gsap';
+  import { gsap } from 'gsap';
   import { elasticOut } from 'svelte/easing';
   import { onMount } from 'svelte';
 

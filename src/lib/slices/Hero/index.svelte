@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import type { Content } from '@prismicio/client';
   import Scene from './Scene.svelte';
-  import gsap from 'gsap';
+  import { gsap } from 'gsap';
 
   export let slice: Content.HeroSlice;
 
