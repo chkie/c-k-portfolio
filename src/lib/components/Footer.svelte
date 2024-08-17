@@ -3,7 +3,7 @@
   import { PrismicLink } from '@prismicio/svelte';
   import IconGithub from '~icons/fa-brands/github';
   import IconLinkedin from '~icons/fa-brands/linkedin';
-  import IconTwitter from '~icons/simple-icons/x';
+  import IconX from '~icons/simple-icons/x';
   import Bounded from './Bounded.svelte';
 
   export let settings: Content.SettingsDocument;
@@ -56,9 +56,9 @@
         <PrismicLink
           field={settings.data.x_link}
           class="p-2 text-2xl text-slate-300 transform transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-          aria-label={settings.data.full_name + ' on Twitter'}
+          aria-label={settings.data.full_name + ' on X'}
         >
-          <IconTwitter />
+          <IconX />
         </PrismicLink>
       {/if}
     </div>
