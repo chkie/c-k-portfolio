@@ -15,7 +15,7 @@
   }
 </script>
 
-<header class="top-0 z-50 mx-auto max-w-7xl md:sticky relative sm:px-4 py-2 lg:pt-4">
+<header class="top-0 z-50 mx-auto max-w-7xl md:sticky relative sm:px-4 py-2 lg:pt-4 lg:px-0">
   <nav>
     <div class="flex-col justify-between flex text-slate-200 md:px-0 top-2 px-4 py-2 md:py-0 md:flex-row md:items-center">
       <div
