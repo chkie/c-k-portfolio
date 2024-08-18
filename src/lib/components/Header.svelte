@@ -15,16 +15,16 @@
   }
 </script>
 
-<header class="top-0 z-50 mx-auto max-w-7xl md:sticky md:top-4 relative sm:px-4 lg:pt-4">
+<header class="top-0 z-50 mx-auto max-w-7xl md:sticky relative sm:px-4 py-2 lg:pt-4">
   <nav>
-    <div class="flex-col justify-between flex text-slate-200 md:px-0 top-2 px-8 py-2 md:flex-row md:items-center">
+    <div class="flex-col justify-between flex text-slate-200 md:px-0 top-2 px-4 py-2 md:py-0 md:flex-row md:items-center">
       <div
-        class="flex items-center justify-between bg-white/5 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border rounded-full border-slate-800 hover:text-cyan-500 md:p-7 md:py-10 px-2 py-3 md:hover:border-cyan-500"
+        class="flex items-center justify-between bg-white/5 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border rounded-full isolate border-slate-800 hover:text-cyan-500 md:px-5 md:py-6 px-4 py-3 md:hover:border-cyan-500"
       >
-        <a href="/" aria-label="Homepage" class="avatar text-6xl font-extrabold relative bottom-2 left-2 md:left-0 md:bottom-2 tracking-tighter text-slate-500"
-          >{settings.data.first_name}<span class="text-[3.65rem] relative top-[14.7px] right-[0.75rem] -z-10 text-slate-200">{settings.data.last_name}</span></a
+        <a href="/" aria-label="Homepage" class="avatar text-4xl font-extrabold relative bottom-1 left-2 md:left-0 md:bottom-1 tracking-tighter text-slate-500"
+          >{settings.data.first_name}<span class="text-4xl relative top-2 right-2 -z-10 text-slate-200">{settings.data.last_name}</span></a
         >
-        <button aria-expanded={open} aria-label="Open Menu" class="block p-2 text-2xl text-slate-200 md:hidden" on:click={() => (open = true)}>
+        <button aria-expanded={open} aria-label="Open Menu" class="block text-2xl text-slate-200 md:hidden" on:click={() => (open = true)}>
           <IconMenu />
         </button>
       </div>
@@ -46,7 +46,7 @@
       </ul>
 
       <!-- Desktop Nav -->
-      <ul class="relative pb-0 md:pb-24 z-50 hidden flex-row items-center gap-1 bg-transparent py-0 md:flex">
+      <ul class="relative pb-0 z-50 hidden flex-row items-center gap-1 bg-transparent py-0 md:flex">
         {#each settings.data.nav_items as { label, link }}
           <li>
             <NavBarLink field={link} {label} {onLinkClick} type="desktop" />

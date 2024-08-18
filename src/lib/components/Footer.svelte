@@ -10,7 +10,7 @@
 </script>
 
 <Bounded as="footer" class="text-slate-600 ">
-  <div class="container mx-auto flex mt-20 lg:-mt-20 flex-col items-center justify-between gap-6 py-8 full-hd:py-0 sm:flex-row">
+  <div class="container mx-auto flex mt-4 lg:mt-20 flex-col items-center justify-between gap-6 py-8 2xl:-mt-10 md:pt-10 sm:flex-row wq-hd:mt-20">
     <div class="name flex flex-col items-center justify-center gap-x-1 gap-y-2 sm:flex-row sm:justify-self-start">
       <a href="/" class="text-4xl relative bottom-1 font-extrabold tracking-tighter text-slate-400 transition-colors duration-150 hover:text-cyan-500">
         {settings.data.first_name}<span class="relative right-2 -z-20 text-4xl text-slate-100 top-2"> {settings.data.last_name}</span>
