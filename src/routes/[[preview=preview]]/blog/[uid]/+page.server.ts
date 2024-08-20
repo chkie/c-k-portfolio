@@ -1,14 +1,6 @@
 import { createClient } from '$lib/prismicio';
 
-interface LoadContext {
-  params: {
-    uid: string;
-  };
-  fetch: typeof fetch;
-  cookies: undefined; // You can replace `any` with a more specific type if you know it
-}
-
-export async function load({ params, fetch, cookies }: LoadContext) {
+export async function load({ params, fetch, cookies }) {
   const client = createClient({ fetch, cookies });
 
   const page = await client.getByUID('blogpost', params.uid);
