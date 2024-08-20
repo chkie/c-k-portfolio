@@ -1,14 +1,23 @@
-import { asText } from '@prismicio/client';
-
+import { asText, mapSliceZone } from '@prismicio/client';
 import { createClient } from '$lib/prismicio';
+import { mappers } from '$lib/slices/mappers';
 
-export async function load({ params, fetch, cookies }) {
+interface LoadContext {
+  params: {
+    uid: string;
+  };
+  fetch: typeof fetch;
+  cookies: undefined; // You can replace `any` with a more specific type if you know it
+}
+
+export async function load({ params, fetch, cookies }: LoadContext) {
   const client = createClient({ fetch, cookies });
 
   const page = await client.getByUID('page', params.uid);
+  const slices = await mapSliceZone(page.data.slices, mappers, { client });
 
   return {
-    page,
+    slices,
     title: asText(page.data.title),
     meta_description: page.data.meta_description,
     meta_title: page.data.meta_title,
