@@ -1,16 +1,9 @@
 import { asText, mapSliceZone } from '@prismicio/client';
+
 import { createClient } from '$lib/prismicio';
 import { mappers } from '$lib/slices/mappers';
 
-interface LoadContext {
-  params: {
-    uid: string;
-  };
-  fetch: typeof fetch;
-  cookies: undefined; // You can replace `any` with a more specific type if you know it
-}
-
-export async function load({ params, fetch, cookies }: LoadContext) {
+export async function load({ params, fetch, cookies }) {
   const client = createClient({ fetch, cookies });
 
   const page = await client.getByUID('page', params.uid);
