@@ -115,7 +115,8 @@
         class="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
       >
         <div class="flex flex-col">
-          <span class="text-3xl font-bold">{post.data.title}</span>
+          <span class="text-3xl font-bold break-words max-w-[55ch]">{post.data.title}</span>
+
           <div
             class="pt-4 md:pt-4 lg:pt-4 flex gap-3 text-cyan-500 flex-wrap {isWrapped
               ? 'pb-8'

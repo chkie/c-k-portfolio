@@ -11,7 +11,7 @@
 
 <Bounded as="footer" class="text-slate-600 ">
   <div
-    class="container mx-auto flex lg:mt-20 flex-col md:px-4 items-center justify-between gap-6 py-8 sm:flex-row wq-hd:pt-[4rem] 4k:pt-[18rem] full-hd:-mt-2 wq-hd:px-0 4k:px-0"
+    class="container mx-auto flex lg:mt-20 flex-col md:px-4 items-center justify-between gap-6 py-8 sm:flex-row wq-hd:pt-[2.5rem] 4k:pt-[18rem] full-hd:-mt-2 wq-hd:px-0 4k:px-0"
   >
     <div
       class="name flex flex-col items-center justify-center gap-x-1 gap-y-2 sm:flex-row sm:justify-self-start"
