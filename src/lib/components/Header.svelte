@@ -16,7 +16,7 @@
 </script>
 
 <header
-  class="top-0 z-50 mx-auto max-w-7xl md:sticky relative sm:px-4 py-2 lg:pt-4 lg:px-8 md:px-12 wq-hd:px-0 4k:px-0"
+  class="top-0 z-50 mx-auto max-w-7xl md:sticky sticky sm:px-4 py-2 lg:pt-4 lg:px-8 md:px-12 wq-hd:px-0 4k:px-0"
 >
   <nav>
     <div
