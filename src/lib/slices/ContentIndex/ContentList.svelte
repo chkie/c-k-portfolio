@@ -21,6 +21,7 @@
 
   let lastMousePos = { x: 0, y: 0 };
   let currentIndex: number | undefined;
+  let isWrapped = true; // Set this to true or false depending on your condition
 
   $: contentImages = items.map((item) => {
     const image = isFilled.image(item.data.hover_image) ? item.data.hover_image : fallbackItemImage;
@@ -114,10 +115,15 @@
         class="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
       >
         <div class="flex flex-col">
-          <span class="text-3xl font-bold">{post.data.title}</span>
-          <div class="flex gap-3 text-cyan-500">
+          <span class="text-3xl font-bold break-words max-w-[55ch]">{post.data.title}</span>
+
+          <div
+            class="pt-4 md:pt-4 lg:pt-4 flex gap-3 text-cyan-500 flex-wrap {isWrapped
+              ? 'pb-8'
+              : ''}"
+          >
             {#each post.tags as tag}
-              <span class="text-lg font-bold">
+              <span class="text-lg font-bold -my-[0.5em]">
                 {tag}
               </span>
             {/each}
