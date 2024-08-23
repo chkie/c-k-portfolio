@@ -1,4 +1,6 @@
-<script lang="ts" context="module">
+<script lang="ts">
+  import { onMount } from 'svelte';
+
   export let showModal: boolean = false;
 
   function toggleModal(): void {
@@ -10,7 +12,7 @@
 
     // Das reCAPTCHA v2 Token abrufen
     const recaptchaToken = (document.getElementById('g-recaptcha-response') as HTMLInputElement)
-      .value;
+      ?.value;
 
     if (!recaptchaToken) {
       alert('Please complete the reCAPTCHA challenge.');
@@ -46,20 +48,22 @@
 
   // reCAPTCHA v2-Skript laden
   function loadRecaptchaScript() {
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.async = true;
-    script.defer = true;
-    script.onload = () => {
-      console.log('reCAPTCHA script loaded successfully');
-    };
-    script.onerror = () => {
-      console.error('Failed to load the reCAPTCHA script');
-    };
-    document.head.appendChild(script);
+    if (typeof window !== 'undefined' && !document.getElementById('recaptcha-script')) {
+      const script = document.createElement('script');
+      script.src = 'https://www.google.com/recaptcha/api.js';
+      script.async = true;
+      script.defer = true;
+      script.id = 'recaptcha-script';
+      script.onload = () => {
+        console.log('reCAPTCHA script loaded successfully');
+      };
+      script.onerror = () => {
+        console.error('Failed to load the reCAPTCHA script');
+      };
+      document.head.appendChild(script);
+    }
   }
 
-  import { onMount } from 'svelte';
   onMount(() => {
     loadRecaptchaScript();
   });
