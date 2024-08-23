@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" context="module">
   export let showModal: boolean = false;
 
   function toggleModal(): void {
@@ -8,16 +8,20 @@
   async function onFormSubmit(event: Event): Promise<void> {
     event.preventDefault();
 
-    // reCAPTCHA v3 Token abrufen
+    // Das reCAPTCHA v2 Token abrufen
+    const recaptchaToken = (document.getElementById('g-recaptcha-response') as HTMLInputElement)
+      .value;
+
+    if (!recaptchaToken) {
+      alert('Please complete the reCAPTCHA challenge.');
+      return;
+    }
+
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+    const message = (document.getElementById('message') as HTMLTextAreaElement).value;
+
+    // Formulardaten an Formspree senden
     try {
-      const recaptchaToken = await grecaptcha.execute('6LcIkS0qAAAAAIuRy7OZLsm-DVwC-5DaPSssqpx3', {
-        action: 'submit'
-      });
-
-      const email = (document.getElementById('email') as HTMLInputElement).value;
-      const message = (document.getElementById('message') as HTMLTextAreaElement).value;
-
-      // Formulardaten an Formspree senden
       const response = await fetch('https://formspree.io/f/myzgbeqj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -35,17 +39,23 @@
         alert('There was an error sending your message. Please try again.');
       }
     } catch (error) {
-      alert('reCAPTCHA could not be verified. Please try again.');
+      console.error('Error during form submission:', error);
+      alert('There was an error submitting the form. Please try again.');
     }
   }
 
-  // reCAPTCHA-Skript laden
+  // reCAPTCHA v2-Skript laden
   function loadRecaptchaScript() {
     const script = document.createElement('script');
-    script.src =
-      'https://www.google.com/recaptcha/api.js?render=6LcIkS0qAAAAAIuRy7OZLsm-DVwC-5DaPSssqpx3';
+    script.src = 'https://www.google.com/recaptcha/api.js';
     script.async = true;
     script.defer = true;
+    script.onload = () => {
+      console.log('reCAPTCHA script loaded successfully');
+    };
+    script.onerror = () => {
+      console.error('Failed to load the reCAPTCHA script');
+    };
     document.head.appendChild(script);
   }
 
@@ -98,6 +108,7 @@
             required
           ></textarea>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LcIkS0qAAAAAIuRy7OZLsm-DVwC-5DaPSssqpx3"></div>
         <button
           type="submit"
           class="w-full py-2 px-4 bg-blue-500 text-white rounded font-bold text-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
