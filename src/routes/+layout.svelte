@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import '../app.css';
   import '@fontsource-variable/inter';
   import { PrismicPreview } from '@prismicio/svelte/kit';
@@ -6,6 +6,14 @@
   import { repositoryName } from '$lib/prismicio';
   import Footer from '$lib/components/Footer.svelte';
   import Header from '$lib/components/Header.svelte';
+  import ContactForm from '$lib/components/ContactForm.svelte';
+  import { onMount } from 'svelte';
+
+  let showModal = false;
+
+  function toggleModal() {
+    showModal = !showModal;
+  }
 
   export let data;
 </script>
@@ -24,12 +32,16 @@
   {/if}
 </svelte:head>
 
-<Header settings={data.settings} />
+<Header settings={data.settings} {showModal} {toggleModal} />
 <main>
   <slot />
 </main>
 <div class="background-gradient absolute inset-0 -z-50 ma-h-screen" />
-<div class="pointer-events-none absolute inset-0 -z-40 h-full opacity-10 mix-blend-soft-light"></div>
+<div
+  class="pointer-events-none absolute inset-0 -z-40 h-full opacity-10 mix-blend-soft-light"
+></div>
 <Footer settings={data.settings} />
+
+<ContactForm settings={data.settings} {showModal} {toggleModal} />
 
 <PrismicPreview {repositoryName} />
