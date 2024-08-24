@@ -20,7 +20,7 @@
     ></span>
     <span class="relative flex items-center justify-center gap-2">{label}</span>
   </PrismicLink>
-{:else if onClick}
+{:else}
   <!-- Verwende einen normalen Button, wenn ein onClick-Event vorhanden ist -->
   <button
     on:click={onClick}

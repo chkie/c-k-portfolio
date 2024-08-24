@@ -65,7 +65,7 @@
           </li>
         {/each}
         {#if isFilled.link(settings.data.cta_link)}
-          <Button linkField={settings.data.cta_link} label={settings.data.cta_label} />
+          <Button onClick={toggleModal} label={settings.data.cta_label} />
         {/if}
       </ul>
 
