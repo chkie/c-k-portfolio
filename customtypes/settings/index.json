@@ -92,6 +92,34 @@
           "allowTargetBlank": false,
           "select": null
         }
+      },
+      "contact_form_header": {
+        "type": "Text",
+        "config": {
+          "label": "Contact Form Head",
+          "placeholder": ""
+        }
+      },
+      "email_title": {
+        "type": "Text",
+        "config": {
+          "label": "Email Title",
+          "placeholder": ""
+        }
+      },
+      "message_title": {
+        "type": "Text",
+        "config": {
+          "label": "Message Title",
+          "placeholder": ""
+        }
+      },
+      "contact_form_button": {
+        "type": "Text",
+        "config": {
+          "label": "Contact Form Button",
+          "placeholder": ""
+        }
       }
     },
     "Metadata": {

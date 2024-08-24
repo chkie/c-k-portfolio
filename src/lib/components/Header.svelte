@@ -7,6 +7,8 @@
   import IconClose from '~icons/ic/baseline-close';
 
   export let settings: Content.SettingsDocument;
+  export let showModal: boolean; // Empfang des showModal-Props
+  export let toggleModal: () => void; // Empfang der toggleModal-Funktion
 
   let open = false;
 
@@ -75,7 +77,7 @@
           </li>
         {/each}
         {#if isFilled.link(settings.data.cta_link)}
-          <Button linkField={settings.data.cta_link} label={settings.data.cta_label} class="ml-3" />
+          <Button onClick={toggleModal} label={settings.data.cta_label} class="ml-3" />
         {/if}
       </ul>
     </div>

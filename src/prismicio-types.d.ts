@@ -405,7 +405,51 @@ interface SettingsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  x_link: prismic.LinkField /**
+  x_link: prismic.LinkField;
+
+  /**
+   * Contact Form Head field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.contact_form_header
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  contact_form_header: prismic.KeyTextField;
+
+  /**
+   * Email Title field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.email_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_title: prismic.KeyTextField;
+
+  /**
+   * Message Title field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.message_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  message_title: prismic.KeyTextField;
+
+  /**
+   * Contact Form Button field in *Settings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.contact_form_button
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  contact_form_button: prismic.KeyTextField /**
    * Meta Title field in *Settings*
    *
    * - **Field Type**: Text
@@ -537,33 +581,6 @@ type BiographySliceVariation = BiographySliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type BiographySlice = prismic.SharedSlice<'biography', BiographySliceVariation>;
-
-/**
- * Default variation for ContactForm Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ContactFormSliceDefault = prismic.SharedSliceVariation<
-  'default',
-  Record<string, never>,
-  never
->;
-
-/**
- * Slice variation for *ContactForm*
- */
-type ContactFormSliceVariation = ContactFormSliceDefault;
-
-/**
- * ContactForm Shared Slice
- *
- * - **API ID**: `contact_form`
- * - **Description**: ContactForm
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ContactFormSlice = prismic.SharedSlice<'contact_form', ContactFormSliceVariation>;
 
 /**
  * Primary content in *ContentIndex → Default → Primary*
@@ -994,9 +1011,6 @@ declare module '@prismicio/client' {
       BiographySliceDefaultPrimary,
       BiographySliceVariation,
       BiographySliceDefault,
-      ContactFormSlice,
-      ContactFormSliceVariation,
-      ContactFormSliceDefault,
       ContentIndexSlice,
       ContentIndexSliceDefaultPrimary,
       ContentIndexSliceVariation,

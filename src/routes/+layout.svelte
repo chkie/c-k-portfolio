@@ -16,13 +16,6 @@
   }
 
   export let data;
-
-  // Funktion zum Öffnen des Modals bei Button-Klick
-  onMount(() => {
-    document.querySelectorAll('[data-toggle="modal"]').forEach((button) => {
-      button.addEventListener('click', toggleModal);
-    });
-  });
 </script>
 
 <svelte:head>
@@ -39,7 +32,7 @@
   {/if}
 </svelte:head>
 
-<Header settings={data.settings} />
+<Header settings={data.settings} {showModal} {toggleModal} />
 <main>
   <slot />
 </main>
@@ -49,7 +42,6 @@
 ></div>
 <Footer settings={data.settings} />
 
-<!-- Einbindung des Kontaktformulars -->
-<ContactForm {showModal} />
+<ContactForm settings={data.settings} {showModal} {toggleModal} />
 
 <PrismicPreview {repositoryName} />
