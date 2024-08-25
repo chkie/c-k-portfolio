@@ -14,7 +14,9 @@
 
 <Bounded tag="article">
   <div
-    class="rounded-2xl md:border-4 border-slate-800 bg-slate-900 border-0 px-4 py-10 md:px-8 md:py-20"
+    class="bg-slate-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 shadow-lg
+
+  px-4 py-10 md:px-8 md:py-20"
   >
     <Heading tag="h1">{page.data.title}</Heading>
     <div class=" pt-2 flex gap-4 md:mt-6 text-cyan-500 flex-wrap {isWrapped ? 'pb-8' : ''}">
