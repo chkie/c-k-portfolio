@@ -140,23 +140,3 @@
     </div>
   </div>
 {/if}
-
-<style>
-  @media (max-width: 767px) and (orientation: portrait) {
-    .contact-form {
-      padding-top: '';
-    }
-  }
-
-  @media (min-width: 768px) and (orientation: landscape) {
-    .contact-form {
-      padding-top: '';
-    }
-  }
-
-  @media (min-width: 768px) and (orientation: portrait) {
-    .contact-form {
-      padding-top: '';
-    }
-  }
-</style>

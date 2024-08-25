@@ -7,7 +7,7 @@
   import IconClose from '~icons/ic/baseline-close';
 
   export let settings: Content.SettingsDocument;
-  export let showModal: boolean; // Empfang des showModal-Props
+  export const showModal: boolean = false; // Empfang des showModal-Props
   export let toggleModal: () => void; // Empfang der toggleModal-Funktion
 
   let open = false;

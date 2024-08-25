@@ -5,6 +5,7 @@
   import { formatDate } from '$lib/formatDate';
   import Heading from './Heading.svelte';
   import Bounded from './Bounded.svelte';
+  import BackToTop from './BackToTop.svelte';
 
   export let page: Content.BlogpostDocument | Content.ProjectDocument;
 
@@ -30,3 +31,4 @@
     </div>
   </div>
 </Bounded>
+<BackToTop />
