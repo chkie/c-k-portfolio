@@ -1,6 +1,6 @@
 <script lang="ts">
   import Bounded from '$lib/components/Bounded.svelte';
-  import Button from '$lib/components/Button.svelte';
+  import BackToTop from '$lib/components/BackToTop.svelte';
   import { type Content, isFilled } from '@prismicio/client';
   import { PrismicRichText } from '@prismicio/svelte';
   import Heading from '$lib/components/Heading.svelte';
@@ -28,3 +28,4 @@
     <Avatar image={slice.primary.avatar} class="row-start-1 max-w-sm md:col-start-2 md:row-end-3" />
   </div>
 </Bounded>
+<BackToTop />
