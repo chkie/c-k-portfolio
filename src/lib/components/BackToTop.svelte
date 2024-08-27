@@ -36,6 +36,7 @@
 <button
   class="transition-transform duration-300 fixed md:bottom-20 w-14 h-14 md:w-20 md:h-20 md:right-20 right-6 bottom-6 rounded-full overflow-hidden group cursor-pointer bg-white/10 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 z-50 flex items-center justify-center shadow-lg"
   on:click={goTop}
+  class:hidden
 >
   <span
     class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-cyan-500 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"
